@@ -18,10 +18,6 @@ a {
 .container {
   min-height: 100vh;
   padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
 }
 
@@ -70,6 +66,22 @@ a {
   margin-top: 3rem;
 }
 
+.post-image {
+  margin-top: 3rem;
+}
+
+.post-content {
+  max-width: 800px;
+  margin-top: 3rem;
+
+  white-space: pre-line;
+  text-align: justify;
+}
+
+.post-author {
+  margin-top: 2rem;
+}
+
 .card {
   margin: 1rem;
   padding: 1.5rem;
@@ -98,16 +110,4 @@ a {
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
 }
