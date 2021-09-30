@@ -20,19 +20,12 @@ export default function PostDetail ({
       <main className='main'>
         <h1 className='title'>{title}</h1>
         <div className='post-image'>
-          <picture>
-            <source
-              srcset={`/images/posts/${imageName}.webp`}
-              type='image/webp'
-              media='(min-width: 600px)'
-            />
-            <Image
-              src={`/images/posts/${imageName}.jpg`}
-              alt='Picture of post'
-              width={imageWidth}
-              height={imageHeight}
-            />
-          </picture>
+          <Image
+            src={`/images/posts/${imageName}.webp`}
+            alt='Picture of post'
+            width={imageWidth}
+            height={imageHeight}
+          />
         </div>
         <div className='post-content'>{content}</div>
         <h3 className='post-author'>Escrito por: {author}</h3>
