@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "start:server": "json-server --w -p 3001 -d 5000 db.json"
   },
   "dependencies": {
     "next": "11.1.2",
@@ -15,6 +16,7 @@
   },
   "devDependencies": {
     "eslint": "7.32.0",
-    "eslint-config-next": "11.1.2"
+    "eslint-config-next": "11.1.2",
+    "json-server": "^0.16.3"
   }
 }
