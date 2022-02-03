@@ -1,34 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Static-Site Generation (SSG)
 
-## Getting Started
+Static Generation describes the process of compiling and rendering a website or app at build time. The output is a bunch of static files, including the HTML file itself and assets like JavaScript and CSS.
 
-First, run the development server:
+**Pros:**
+  * **Cheap**
+  * **Security**
+  * **Speed**
+  * **Scalability**
+  * **No need of a backend server**
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+**Cons:**
+  * **No user management**
+  * **Increase the build time**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+![Chart showing the relation betwwen amount of pages and build time](https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/384b3f3b-756d-4061-92c4-59a4d2a9f1fb/build-times-regeneration-nextjs.png)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Server-Side Rendering (SSR)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Server-Side Rendering describes the process of pre-rendering the page on the server, which is then generated upon each user request.
 
-## Learn More
+**Pros:**
+  * **Great for SEO**
+  * **Quck initial access**
 
-To learn more about Next.js, take a look at the following resources:
+**Cons:**
+  * **No user management**
+  * **Higher latency**
+  * **Server cost**
+  * **Vulnerability**
+  * **Slower page transitions**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Incremental Static Regeneration (ISR)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Server-Side Rendering describes the process of generate static pages at runtime (on-demand) instead of at build-time.
 
-## Deploy on Vercel
+**Pros:**
+  * **All of SGG**
+  * **Faster builds**
+  * **Higher Cache Hit Rate**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**Cons:**
+  * **User will not see the most up-to-date version**
+  * **If you rollback your site to a different deploy, your page will stay existing, because of cache**

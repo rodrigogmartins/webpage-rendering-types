@@ -23,7 +23,7 @@ export default function Home () {
         <h1 className='title'>Bem vindo ao Blog do Zé</h1>
         <div className='grid'>
           {posts.map(post => (
-            <a href={`/posts/ssg/${post.id}`} key={post.id} className='card'>
+            <a href={`/posts/static-site-generation/${post.id}`} key={post.id} className='card'>
               <h2>{post.title} &rarr;</h2>
               <p>{post.summary}</p>
             </a>
