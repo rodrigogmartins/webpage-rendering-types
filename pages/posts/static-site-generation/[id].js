@@ -28,7 +28,7 @@ export default function PostDetail ({
           />
         </div>
         <div className='post-content'>{content}</div>
-        <h3 className='post-author'>Escrito por: {author}</h3>
+        <h3 className='post-author'>Author: {author}</h3>
       </main>
     </div>
   )
